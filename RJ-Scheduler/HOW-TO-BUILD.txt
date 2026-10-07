@@ -1,0 +1,28 @@
+RJ-Scheduler - Android project
+==============================
+
+OPTION A - Build on your PC with Android Studio
+1. Install Android Studio (free): https://developer.android.com/studio
+2. Unzip this folder somewhere (e.g. Documents\RJ-Scheduler).
+3. Android Studio > Open > choose the RJ-Scheduler folder.
+4. Wait for "Gradle sync" to finish (first time downloads tools; can take 5-15 min).
+   If it offers to upgrade the Android Gradle Plugin, you can click "Upgrade".
+5. Menu: Build > Build App Bundle(s) / APK(s) > Build APK(s).
+6. Click "locate" in the pop-up. Your file is:
+   app\build\outputs\apk\debug\app-debug.apk
+7. Copy the APK to the Android phone, tap it, and allow "Install unknown apps".
+
+OPTION B - Build for free on GitHub (no installs)
+1. Create a free GitHub account and a new repository.
+2. Upload ALL files in this folder (including the hidden .github folder).
+3. Open the "Actions" tab - "Build RJ-Scheduler APK" runs by itself (about 5 min).
+4. Click the finished run > Artifacts > RJ-Scheduler-apk > download, unzip -> APK.
+
+Updating the app later
+- Replace app\src\main\assets\index.html with the new version, then build again.
+- Raise versionCode (1 -> 2 ...) in app\build.gradle so phones accept the update.
+
+Notes
+- The APK from these steps is a "debug" build: fine for installing on your own and
+  staff phones. For the Google Play Store use Build > Generate Signed App Bundle.
+- Records, names and the PIN are saved on each phone. Uninstalling the app erases them.
